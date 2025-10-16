@@ -56,7 +56,7 @@ export function Hero() {
   };
 
   return (
-    <div className="relative h-[100vh] w-full bg-[#000237] flex justify-center overflow-hidden">
+    <div className="relative h-[100dvh] w-full bg-[#000237] flex justify-center overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/upper/background.svg"
@@ -68,19 +68,18 @@ export function Hero() {
       </div>
       <div className="relative z-10 flex flex-col items-center top-[14%] space-y-8 px-4">
         <div className="relative flex flex-col items-center space-y-8 w-full max-w-3xl">
-          <div className="relative text-center p-8 backdrop-blur-[5px]">
+          <div className="relative text-center p-2 backdrop-blur-[5px]">
             <h1 className="font-bold tracking-tight text-[clamp(3rem,10vw,8rem)] leading-none whitespace-nowrap text-white drop-shadow-lg">
               WebJam 2025
             </h1>
-            <p className="mt-4 text-center font-semibold w-[90%] md:w-[75%] lg:w-[75%] text-[clamp(1rem,2.5vw,1.25rem)] text-white/95 drop-shadow-md mx-auto">
-              ICS Student Council&apos;s week-long web application competition —
-              no experience necessary!
+            <p className="mt-2 text-center font-semibold w-[90%] md:w-[75%] lg:w-[75%] text-[clamp(1rem,2.5vw,1.25rem)] text-white/95 drop-shadow-md mx-auto">
+              ICS Student Council&apos;s week-long web application competition
             </p>
 
-            <div className="flex flex-col items-center justify-center gap-x-8 gap-y-2 md:flex-row mt-8">
+            <div className="flex flex-col items-center justify-center gap-x-8 gap-y-2 md:flex-row mt-4">
               <div className="flex min-w-fit items-center space-x-2 font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-white/90 drop-shadow">
                 <CalendarIcon className="w-5 h-5" />
-                <p className="whitespace-nowrap">Nov. 18 - 22</p>
+                <p className="whitespace-nowrap">Nov. 3-7</p>
               </div>
 
               <div className="flex min-w-fit items-center space-x-2 font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-white/90 drop-shadow">
@@ -121,7 +120,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-[8%] left-[7%] md:left-[15%] lg:left-[30%] hidden sm:block cursor-pointer"
+          className="absolute bottom-[4%] left-[4%] md:left-[15%] lg:left-[30%] hidden sm:block cursor-pointer"
           style={{ pointerEvents: isWalking ? "none" : "auto" }}
           whileHover={{
             y: -8,
@@ -155,7 +154,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-[8%] left-[37%] sm:left-[55%] cursor-pointer"
+          className="absolute bottom-[4%] left-[37%] sm:left-[62%] md:left-[55%] cursor-pointer"
           style={{ pointerEvents: isWalking || isJumping ? "none" : "auto" }}
           whileHover={{
             y: -8,
