@@ -56,7 +56,7 @@ export function Hero() {
   };
 
   return (
-    <div className="relative h-[100dvh] w-full bg-[#000237] flex justify-center overflow-hidden">
+    <div className="relative h-[100vh] w-full bg-[#000237] flex justify-center overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/upper/background.svg"
