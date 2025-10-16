@@ -38,13 +38,13 @@ export const scheduleData: Day[] = [
         title: "Workshop TBD",
         time: "6PM - 7PM",
         location: "DBH 3011",
-        description: "Discover how to use Git for version control in your web development projects. Essential for team collaboration and code management."
+        description: "TBD"
       },
       {
         title: "Workshop TBD",
         time: "7PM - 8PM",
         location: "DBH 3011",
-        description: "Discover how to use Git for version control in your web development projects. Essential for team collaboration and code management."
+        description: "TBD"
       },
       {
         title: "Work Time",
