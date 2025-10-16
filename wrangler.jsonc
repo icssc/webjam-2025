@@ -1,26 +1,17 @@
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
-    "main": ".open-next/worker.js",
-    "name": "webjam-2025",
-    "compatibility_date": "2025-10-16",
-    "compatibility_flags": [
-      // Enable Node.js API
-      // see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#nodejs-compatibility-flag
-      "nodejs_compat",
-      // Allow to fetch URLs in your app
-      // see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#global-fetch-strictly-public
-      "global_fetch_strictly_public",
-    ],
-    "assets": {
-      "directory": ".open-next/assets",
-      "binding": "ASSETS",
-    },
-    "services": [
-      {
-        "binding": "WORKER_SELF_REFERENCE",
-        "service": "webjam-2025",
-      },
-    ],
-    "r2_buckets": [
-    ],
-  }
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "webjam-2025",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-10-16",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "webjam.icssc.club", "custom_domain": true },
+    { "pattern": "webjam-2025.icssc.club", "custom_domain": true },
+    { "pattern": "2025.webjam.icssc.club", "custom_domain": true }
+  ]
+}
