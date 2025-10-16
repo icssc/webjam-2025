@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import { Event, Day, scheduleData } from "@/data/schedule";
 import TicketField from "@/components/ui/ticket/ticket-field";
 import BarcodeSection from "@/components/ui/ticket/barcode-section";
@@ -50,6 +50,16 @@ export default function Ticket({
 
   const ticketRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 640);
+    };
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
 
   useLayoutEffect(() => {
     if (!ticketRef.current) return;
@@ -72,23 +82,22 @@ export default function Ticket({
         sm:absolute sm:left-1/2 sm:-translate-x-1/2
       `}
       style={{
-        top: window.innerWidth >= 640 ? `${yShift}px` : "auto",
+        top: isDesktop ? `${yShift}px` : "auto",
         transformOrigin: "center center",
-        transform:
-          window.innerWidth >= 640
-            ? `rotate(${rotation}deg) translateX(${xShift}px)`
-            : "none",
+        transform: isDesktop
+          ? `rotate(${rotation}deg) translateX(${xShift}px)`
+          : "none",
         zIndex: 10 + eventIndex,
-        marginBottom: window.innerWidth < 640 ? "1rem" : "0",
+        marginBottom: !isDesktop ? "1rem" : "0",
       }}
       onMouseEnter={(e) => {
-        if (window.innerWidth >= 640) {
+        if (isDesktop) {
           e.currentTarget.style.transform = `rotate(0deg) translateY(-30px) scale(1.05)`;
           e.currentTarget.style.zIndex = "999";
         }
       }}
       onMouseLeave={(e) => {
-        if (window.innerWidth >= 640) {
+        if (isDesktop) {
           e.currentTarget.style.transform = `rotate(${rotation}deg) translateX(${xShift}px)`;
           e.currentTarget.style.zIndex = `${10 + eventIndex}`;
         }
