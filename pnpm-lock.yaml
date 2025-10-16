@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@opennextjs/cloudflare':
-        specifier: ^1.11.0
-        version: 1.11.0(wrangler@4.43.0)
       '@radix-ui/react-accordion':
         specifier: ^1.2.12
         version: 1.2.12(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -42,6 +39,9 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.1
+      '@opennextjs/cloudflare':
+        specifier: ^1.11.0
+        version: 1.11.0(wrangler@4.43.0)
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.14
