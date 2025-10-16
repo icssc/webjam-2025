@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useLayoutEffect, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Event, Day, scheduleData } from "@/data/schedule";
 import TicketField from "@/components/ui/ticket/ticket-field";
 import BarcodeSection from "@/components/ui/ticket/barcode-section";
@@ -49,7 +49,7 @@ export default function Ticket({
   const yShift = eventIndex * 150 + rand(dayIndex * 300 + eventIndex, -20, 20);
 
   const ticketRef = useRef<HTMLDivElement>(null);
-  const [size, setSize] = useState({ w: 0, h: 0 });
+  const [size, setSize] = useState({ w: 400, h: 250 });
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -61,11 +61,13 @@ export default function Ticket({
     return () => window.removeEventListener("resize", checkDesktop);
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!ticketRef.current) return;
     const observer = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect;
-      setSize({ w: width, h: height });
+      if (width > 0 && height > 0) {
+        setSize({ w: width, h: height });
+      }
     });
     observer.observe(ticketRef.current);
     return () => observer.disconnect();
@@ -104,9 +106,7 @@ export default function Ticket({
       }}
     >
       <div className="relative sm:static">
-        {size.w > 0 && size.h > 0 && (
-          <PerforationMask id={maskId} width={size.w} height={size.h} />
-        )}
+        <PerforationMask id={maskId} width={size.w} height={size.h} />
 
         <div
           ref={ticketRef}
