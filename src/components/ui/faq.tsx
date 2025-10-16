@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -10,20 +13,35 @@ export function Faq() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="z-10 w-[80%] space-y-8 my-16">
-        <div className="flex text-7xl font-semibold">FAQ</div>
+        <motion.div
+          className="flex text-7xl font-semibold"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          FAQ
+        </motion.div>
 
-        <Accordion type="single" collapsible>
-          {FAQ.map((item) => (
-            <AccordionItem value={item.question} key={item.question}>
-              <AccordionTrigger className="text-left text-2xl">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-xl">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Accordion type="single" collapsible>
+            {FAQ.map((item) => (
+              <AccordionItem value={item.question} key={item.question}>
+                <AccordionTrigger className="text-left text-2xl">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-xl">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </div>
   );
