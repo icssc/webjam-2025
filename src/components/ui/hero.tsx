@@ -95,7 +95,7 @@ export function Hero() {
 
       <div className="absolute inset-0 z-20 select-none">
         <motion.div
-          className="absolute bottom-[2%] left-[5%] lg:left-[-5%] xl:left-[5%] lg:block hidden cursor-pointer"
+          className="absolute bottom-[5%] left-[5%] lg:left-[-5%] xl:left-[5%] lg:block hidden cursor-pointer"
           style={{ pointerEvents: isFlipping ? "none" : "auto" }}
           key={Math.floor(sunglassesClicks / 3)}
           whileHover={{
@@ -108,7 +108,7 @@ export function Hero() {
           transition={{ rotate: { duration: 0.6, ease: "easeInOut" } }}
           onClick={handleSunglassesClick}
         >
-          <div className="relative h-[280px] w-[280px]">
+          <div className="relative h-[28vh] w-[28vh]">
             <Image
               src="/upper/anteater-sunglasses.svg"
               alt="Anteater with sunglasses"
@@ -224,7 +224,7 @@ export function Hero() {
           }
           onClick={handlePeppyClick}
         >
-          <div className="relative h-[240px] w-[240px]">
+          <div className="relative h-[26vh] w-[26vh]">
             <Image
               src="/upper/anteater-peppy.svg"
               alt="Peppy anteater"
