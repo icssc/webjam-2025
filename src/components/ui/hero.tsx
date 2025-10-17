@@ -95,7 +95,7 @@ export function Hero() {
 
       <div className="absolute inset-0 z-20 select-none">
         <motion.div
-          className="absolute bottom-[8%] left-[7%] lg:block hidden cursor-pointer"
+          className="absolute bottom-[2%] left-[5%] lg:left-[-5%] xl:left-[5%] lg:block hidden cursor-pointer"
           style={{ pointerEvents: isFlipping ? "none" : "auto" }}
           key={Math.floor(sunglassesClicks / 3)}
           whileHover={{
@@ -108,7 +108,7 @@ export function Hero() {
           transition={{ rotate: { duration: 0.6, ease: "easeInOut" } }}
           onClick={handleSunglassesClick}
         >
-          <div className="relative h-[200px] w-[200px]">
+          <div className="relative h-[280px] w-[280px]">
             <Image
               src="/upper/anteater-sunglasses.svg"
               alt="Anteater with sunglasses"
@@ -120,7 +120,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-[4%] left-[4%] md:left-[15%] lg:left-[30%] hidden sm:block cursor-pointer"
+          className="absolute bottom-[2%] left-[4%] lg:left-[18%] xl:left-[25%] hidden sm:block cursor-pointer"
           style={{ pointerEvents: isWalking ? "none" : "auto" }}
           whileHover={{
             y: -8,
@@ -130,7 +130,7 @@ export function Hero() {
           animate={
             isWalking
               ? {
-                  x: ["0%", "30%", "30%", "0%"],
+                  x: ["0%", "20%", "20%", "0%"],
                   rotate: [0, 1, -1, 1, -1, 1, -1, 0],
                   transition: {
                     duration: 3,
@@ -142,7 +142,7 @@ export function Hero() {
           }
           onClick={handleDumplingClick}
         >
-          <div className="relative h-[200px] w-[200px]">
+          <div className="relative h-[35vh] w-[35vh]">
             <Image
               src="/upper/anteater-dumpling.svg"
               alt="Anteater with dumpling"
@@ -154,7 +154,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-[4%] left-[37%] sm:left-[62%] md:left-[55%] cursor-pointer"
+          className="absolute bottom-[2%] left-[40%] sm:left-[55%] md:left-[55%] cursor-pointer"
           style={{ pointerEvents: isWalking || isJumping ? "none" : "auto" }}
           whileHover={{
             y: -8,
@@ -181,7 +181,7 @@ export function Hero() {
                 }
               : isWalking
               ? {
-                  x: ["0%", "-30%", "-30%", "0%"],
+                  x: ["0%", "-20%", "-20%", "0%"],
                   rotate: [0, -1, 1, -1, 1, -1, 1, 0],
                   transition: {
                     duration: 3,
@@ -193,7 +193,7 @@ export function Hero() {
           }
           onClick={handlePairClick}
         >
-          <div className="relative h-[210px] w-[250px]">
+          <div className="relative h-[35vh] w-[35vh]">
             <Image
               src="/upper/anteater-pair.svg"
               alt="Anteater pair"
@@ -205,7 +205,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-[8%] left-[82%] lg:block hidden cursor-pointer"
+          className="absolute bottom-[8%] left-[88%] xl:left-[82%] lg:block hidden cursor-pointer"
           style={{ pointerEvents: isDancing ? "none" : "auto" }}
           whileHover={{
             y: -8,
@@ -224,7 +224,7 @@ export function Hero() {
           }
           onClick={handlePeppyClick}
         >
-          <div className="relative h-[200px] w-[200px]">
+          <div className="relative h-[240px] w-[240px]">
             <Image
               src="/upper/anteater-peppy.svg"
               alt="Peppy anteater"
