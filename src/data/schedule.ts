@@ -59,10 +59,10 @@ export const scheduleData: Day[] = [
     date: "November 5",
     events: [
       {
-        title: "CTC - Intro to React",
+        title: "CTC - From Idea to Interface",
         time: "6PM - 7PM",
         location: "DBH 3011",
-        description: "Learn the basics of React to get your projects started."
+        description: "A fast-paced, hands-on workshop where you’ll turn rough concepts into polished designs. Learn core Figma fundamentals, build interactive interfaces, and leave ready to bring your ideas to life."
       },
       {
         title: "Cyber @ UCI - Intro to Application Security",
