@@ -6,6 +6,7 @@ import Prizes from "@/components/ui/prizes";
 import Rules from "@/components/ui/rules";
 import FAQ from "@/components/ui/faq";
 import Footer from "@/components/ui/footer";
+import Sponsors from "@/components/ui/sponsors";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="bg-gradient-to-b from-[#032b63] to-[#000112]">
         <Schedule />
         <Prizes />
+        <Sponsors />
         <Rules />
         <FAQ />
       </div>
