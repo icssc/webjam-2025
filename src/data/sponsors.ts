@@ -11,6 +11,11 @@ export const SPONSORS = [
     alt: "Obsidian Entertainment Logo",
   },
   {
+    name: "Student Programming Funding Board",
+    img: "/sponsors/spfb.png",
+    alt: "Student Programming Funding Board Logo",
+  },
+  {
     name: "Boiling Point",
     img: "/sponsors/boiling-point.svg",
     alt: "Boiling Point Logo",
