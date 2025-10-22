@@ -35,16 +35,16 @@ export const scheduleData: Day[] = [
     date: "November 4",
     events: [
       {
-        title: "Workshop TBD",
+        title: "CareTech - Intro to API Integration",
         time: "6PM - 7PM",
         location: "DBH 3011",
-        description: "TBD"
+        description: ""
       },
       {
-        title: "Workshop TBD",
+        title: "Blockchain - Intro to Developing a Decentralized App (dApp)",
         time: "7PM - 8PM",
         location: "DBH 3011",
-        description: "TBD"
+        description: ""
       },
       {
         title: "Work Time",
