@@ -14,5 +14,9 @@ export const PRIZES = [
     {
         label: "Squishmallows",
         img: "/prizes/squishmallow.jpg",
+    },
+    {
+        label: "Obsidian Entertainment Merch",
+        img: "/prizes/obsidian-merch.png",
     }
 ];
