@@ -38,13 +38,13 @@ export const scheduleData: Day[] = [
         title: "CareTech - Intro to API Integration",
         time: "6PM - 7PM",
         location: "DBH 3011",
-        description: ""
+        description: "Learn how to fetch and display real time health or fitness data using a public API. Explore the concept of APIs and asynchronous JavaScript in a simple, interactive way."
       },
       {
-        title: "Blockchain - Intro to Developing a Decentralized App (dApp)",
+        title: "Blockchain - Intro to Developing a Decentralized App",
         time: "7PM - 8PM",
         location: "DBH 3011",
-        description: ""
+        description: "Get introduced to decentralized applications (dApps) and their tech stack. Learn how to build a dApp by connecting pre-written smart contracts to a frontend, and brainstorm potential Web3 ideas. Work on your own basic dApp using your web development skills to bring a cool blockchain concept to life."
       },
       {
         title: "Work Time",
