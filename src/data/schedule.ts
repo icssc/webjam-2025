@@ -41,16 +41,16 @@ export const scheduleData: Day[] = [
         description: "Learn how to fetch and display real time health or fitness data using a public API. Explore the concept of APIs and asynchronous JavaScript in a simple, interactive way."
       },
       {
+        title: "Work Time",
+        time: "6PM - 8PM",
+        location: "DBH 4011",
+        description: "Dedicated time to work with your team. Mentors will be available to assist you with any challenges you encounter."
+      },
+      {
         title: "Blockchain - Intro to Developing a Decentralized App",
         time: "7PM - 8PM",
         location: "DBH 3011",
         description: "Get introduced to decentralized applications (dApps) and their tech stack. Learn how to build a dApp by connecting pre-written smart contracts to a frontend, and brainstorm potential Web3 ideas. Work on your own basic dApp using your web development skills to bring a cool blockchain concept to life."
-      },
-      {
-        title: "Work Time",
-        time: "7PM - 8PM",
-        location: "DBH 4011",
-        description: "Dedicated time to work with your team. Mentors will be available to assist you with any challenges you encounter."
       }
     ]
   },
@@ -65,16 +65,16 @@ export const scheduleData: Day[] = [
         description: "A fast-paced, hands-on workshop where you'll turn rough concepts into polished designs. Learn core Figma fundamentals, build interactive interfaces, and leave ready to bring your ideas to life."
       },
       {
-        title: "Cyber @ UCI - Intro to Application Security",
-        time: "7PM - 8PM",
-        location: "DBH 3011",
-        description: "Get introduced to the world of application security and learn how to secure your web applications."
-      },
-      {
         title: "Work Time",
         time: "6PM - 8PM",
         location: "DBH 5011",
         description: "Dedicated time to work with your team. Mentors will be available to assist you with any challenges you encounter."
+      },
+      {
+        title: "Cyber @ UCI - Intro to Application Security",
+        time: "7PM - 8PM",
+        location: "DBH 3011",
+        description: "Get introduced to the world of application security and learn how to secure your web applications."
       },
       {
         title: "Boba Social",
