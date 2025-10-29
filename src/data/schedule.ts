@@ -92,7 +92,7 @@ export const scheduleData: Day[] = [
         title: "VGDC - Gamifying Your App",
         time: "6PM - 7PM",
         location: "DBH 3011",
-        description: "Learn how to gamify your web application to make it more engaging and fun for users."
+        description: "A collab workshop run by VGDC's Design and UI/UX Departments to teach jammers about user engagement strategies inspired by game design fundamentals and essential UI/UX features that ensure users stick around and come back for more."
       },
       {
         title: "Work Time",
